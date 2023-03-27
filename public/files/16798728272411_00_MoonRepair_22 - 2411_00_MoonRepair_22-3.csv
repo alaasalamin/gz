@@ -1,0 +1,22 @@
+condition,model,imei,error,description,accessories,CustomerName
+2659244,"iPad Pro 11"" (A1980) 2018",111111111111111,[121] - Keine Aufladung der Batterie,"Board defekt, Ladeelektronik defekt",159 Übergabe externe Reparatur,AGAN
+2153377,iPhone 7,353074099912162,[916] - Bootloop,Bootlop MB Defekt,159 Übergabe externe Reparatur,AGAN
+2057761,iPhone 7,359212070064355,"[220] - Schlechter Empfang oder Verbindung
+[16H] - Beschädigter Lautsprecher
+[518] - Keine Mikrofonfunktion",Soundchip defekt,159 Übergabe externe Reparatur,AGAN
+2831691,iPhone X,111111111111111,"[117] - Kurze Funktionszeit / Batteriedauer (Kapazität <=80%)
+[74C] - Problem mit biometrischem Sensor",Face- ID defekt,159 Übergabe externe Reparatur,AGAN
+2830670,iPhone 7 Plus,353808084659092,"[16H] - Beschädigter Lautsprecher
+[518] - Keine Mikrofonfunktion",kein Audio- Soundchip defekt,159 Übergabe externe Reparatur,AGAN
+2751004,iPhone SE (2020),356742115412394,[72B] - System startet nur in der Sicherheits Betriebsart,"startet das Gerät nur in einem schwarzen ""Restore Mode"". Auch mit iTunes bin ich nicht in der Lage das Gerät auf Werkseinstellungen wiederherzustellen. Sowohl im normalen als auch im DFU Modus",159 Übergabe externe Reparatur,AGAN
+2718650,iPhone 11 Pro,352819110189682,"[131] - Keine / fehlerhafte Display-Anzeige
+[11F] - Keine Funktion",keine funkcion,159 Übergabe externe Reparatur,AGAN
+2483784,iPhone XR,357352099472361,"[131] - Keine / fehlerhafte Display-Anzeige
+[156] - Steuerung über Bluetooth arbeitet fehlerhaft",Bluetooth steuerung defekt,159 Übergabe externe Reparatur,AGAN
+2276519,iPhone 7,359207073463760,"[16H] - Beschädigter Lautsprecher
+[518] - Keine Mikrofonfunktion",Boardfehler;Soundchip defekt,159 Übergabe externe Reparatur,AGAN
+2261208,iPhone X,359408084278276,"[906] - Frontkamera mangelhaft
+[232] - Schwache Übertragung / Verbindung
+[123] - Ladezeit zu lang
+[74C] - Problem mit biometrischem Sensor",TrueDepth-Kamera Defekt = Face ID Defekt,159 Übergabe externe Reparatur,AGAN
+2593117,iPhone 7,359206074725292,[518] - Keine Mikrofonfunktion,SOUNDCHIP DEFEKT,159 Übergabe externe Reparatur,AGAN
