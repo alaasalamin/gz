@@ -46,7 +46,7 @@ function fillFilesTable(data){
 
         }else{
             if(row['fileType'] === "pdf"){
-                td1.innerHTML = "<img src='style/images/pdf-file.png' width='40' class='mr-3' >"+ row["objectName"];
+                td1.innerHTML = "<img src='style/images/pdf-file.png' width='40' class='mr-3' ><a href='#' onclick=downloadFile("+row["objectId"]+")>"+ row["objectName"]+"</a>";
 
             }else if(row['fileType'] === "png" || row['fileType'] === "jpeg" || row['fileType'] === "jpg" || row['fileType'] === "gif"){
 
@@ -107,6 +107,35 @@ function fillFilesTable(data){
 document.addEventListener("DOMContentLoaded", () => { loadFolder(0); });
 
 
+function downloadFile(fileId){
+    var API = "http://127.0.0.1:8000/api/downloadFile/" + fileId;
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("GET", API);
+    xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
+
+    xhr.onload = function () {
+        console.log(xhr.response);
+
+        let downloadLink = JSON.parse(xhr.response).downloadLink;
+        let fileName = JSON.parse(xhr.response).fileName;
+
+
+        if(xhr.status === 201){
+            const link = document.createElement("a");
+            link.href = downloadLink;
+            link.download = fileName;
+            link.click();
+        }
+
+    };
+    xhr.onerror = function () {
+        // ...handle/report error...
+    };
+
+    xhr.send();
+    console.log(API);
+}
 
 function deleteFolder(folderId){
     if (confirm('Möchten Sie diesen Ordner wirklich löschen?')) {

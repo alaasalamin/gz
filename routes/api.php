@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\FolderController;
 use Illuminate\Http\Request;
@@ -16,6 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::post("login", [AuthController::class, "login"]);
+
+Route::group(['middleware' => ['auth:sanctum']], function (){
+    // Download File API path
+    Route::get("downloadFile/{id}", [FileController::class, "downloadFile"]);
+    ///////////////////////////////
+    Route::get("getBearerToken", [AuthController::class, "bearerToken"]);
+    Route::post("logout", [AuthController::class, "logout"]);
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -29,3 +41,4 @@ Route::get("deleteFilePermanently/{id}", [FileController::class, "deleteFilePerm
 Route::get("deleteFolderPermanently/{id}", [FolderController::class, "deleteFolderPermanently"]);
 Route::get("getDeletedFiles", [FolderController::class, "getDeletedFiles"]);
 Route::post("uploadMultipleFiles", [FileController::class, "filesUploadMultiple"]);
+Route::post("register", [AuthController::class, "register"]);

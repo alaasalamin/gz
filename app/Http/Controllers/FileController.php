@@ -11,6 +11,8 @@ use PhpParser\Node\Expr\Array_;
 class FileController extends Controller
 {
     //
+
+
     public function filesUpload(Request $request){
         $files = $request->file('files');
         $request->validate([
@@ -86,6 +88,18 @@ class FileController extends Controller
     public function deleteFilePermanently($id){
         $file = File::find($id);
         $file->destroy($id);
+    }
+
+    public function downloadFile($id){
+        $file = File::find($id);
+
+        $downloads = $file->downloads;
+        $downloads++;
+        $file->update(["downloads" => $downloads]);
+        return response([
+            'downloadLink' => $file->downloadLink,
+            'fileName' => $file->fileName
+        ], 201);
     }
 
 }

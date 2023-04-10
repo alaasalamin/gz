@@ -18,7 +18,6 @@
 </div>
 </div>
 <section class="mainSection position-relative">
-
     <nav class="navbar mt-5 mb-3 navbar-light justify-content-between">
         <div class="container">
         <a class="navbar-brand">
@@ -127,15 +126,17 @@
     </div>
 
 
-
+    <input type="hidden" id="accessToken" value="{{$accessToken}}">
 
 </section>
-
+<iframe id="my_iframe" style="display:none;"></iframe>
 <div class="footer">
 
 </div>
 <script src="js/fileManager.js"></script>
 <script>
+
+    let accessToken = document.getElementById("accessToken").value;
     var Path = "/";
 
     var parentId = 0;
@@ -249,7 +250,7 @@
 
         for(var count = 0; count < drop_files.length; count++)
         {
-            if(!['application/zip', 'image/png', 'video/mp4'].includes(drop_files[count].type))
+            if(!['application/pdf', 'image/png', 'video/mp4'].includes(drop_files[count].type))
             {
                 error += '<div class="alert alert-danger"><b>'+image_number+'</b> Selected File must be .jpg or .png Only.</div>';
             }

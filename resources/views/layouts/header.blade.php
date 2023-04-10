@@ -30,6 +30,13 @@
                     <li class="nav-item mx-3">
                         <a href="" class="nav-link text-light">Admin-Panel</a>
                     </li>
+                    <li class="nav-item mx-3">
+                        <form action="/logout" method="post">
+                            @csrf
+                            <button>logout</button>
+                        </form>
+                        <a  href="#" class="nav-link text-light">Logout</a>
+                    </li>
                 </ul>
             </div>
         </div>

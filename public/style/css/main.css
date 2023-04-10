@@ -52,14 +52,14 @@
     display: flex;
 }
 
-.loginBlackBox form{
+.loginBlackBox .loginForm{
     margin-left: 100px;
 }
-.loginBlackBox form label{
+.loginBlackBox .loginForm label{
     letter-spacing: 2px;
 }
 
-.loginBlackBox form .loginBtn{
+.loginBlackBox .loginForm .loginBtn{
     position: absolute;
     right: 15px;
     background-color: #fff;

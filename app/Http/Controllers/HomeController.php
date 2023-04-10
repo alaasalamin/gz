@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\File;
 use App\Models\Folder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Sanctum\PersonalAccessToken;
 
 class HomeController extends Controller
 {
@@ -27,9 +29,13 @@ class HomeController extends Controller
     {
         $deletedFolders = Folder::where("status", "deleted")->count();
         $deletedFolders += File::where("status", "deleted")->count();
+        $user = Auth::user();
+        auth()->user()->tokens()->delete();
+        $token = $user->createToken('accessToken')->plainTextToken;
 
         return view('home.home', [
             "deletedCounter" => $deletedFolders,
+            "accessToken" => $token,
         ]);
     }
 }
