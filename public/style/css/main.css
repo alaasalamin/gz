@@ -70,7 +70,7 @@
 }
 
 .mainSection{
-    height: 100vh;
+    height: 60vh;
 }
 
 .footer{
@@ -128,4 +128,14 @@ button[type="submit"]:hover {
 input[type="search"]:focus {
     box-shadow: 0 0 3px 0 #111;
     outline: none;
+}
+
+
+#drag_drop{
+    background-color : #f9f9f9;
+    border : #ccc 4px dashed;
+    line-height : 250px;
+    padding : 12px;
+    font-size : 24px;
+    text-align : center;
 }

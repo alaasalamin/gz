@@ -25,11 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $folders = Folder::where("parentFolder", "0")->orderBy("folderName", "ASC")->get();
-        $files = File::where("parentFolder", "0")->orderBy("fileName", "ASC")->get();
+        $deletedFolders = Folder::where("status", "deleted")->count();
+        $deletedFolders += File::where("status", "deleted")->count();
+
         return view('home.home', [
-            "folders" => $folders,
-            "files" => $files
+            "deletedCounter" => $deletedFolders,
         ]);
     }
 }

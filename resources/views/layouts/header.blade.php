@@ -13,19 +13,22 @@
                 </a>
                 <ul class="navbar-nav p-2">
                     <li class="nav-item mx-3">
-                        <a href="" class="nav-link text-light">Uberuns</a>
+                        <a href="" class="nav-link text-light">Über uns</a>
                     </li>
                     <li class="nav-item mx-3">
                         <a href="" class="nav-link text-light">Projekte</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a href="" class="nav-link text-light">Galarie</a>
+                        <a href="" class="nav-link text-light">Galerie</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a href="" class="nav-link text-light">Unsere Handler</a>
+                        <a href="" class="nav-link text-light">Unsere Händler</a>
                     </li>
                     <li class="nav-item mx-3">
                         <a href="" class="nav-link text-light">Kontakt</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="" class="nav-link text-light">Admin-Panel</a>
                     </li>
                 </ul>
             </div>
@@ -33,3 +36,4 @@
 
     </div>
 </nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

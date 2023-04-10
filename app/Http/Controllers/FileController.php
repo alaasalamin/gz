@@ -44,4 +44,48 @@ class FileController extends Controller
 
         return redirect()->back();
     }
+
+
+
+    public function filesUploadMultiple(Request $request){
+        $files = $request->file('files');
+        $TableInfo = array();
+        foreach ($files as $file){
+            $filename = "(".time().")".$file->getClientOriginalName();
+            $move = $file->move(public_path('files'), $filename);
+
+            $downloadLink = url("/files/".$filename);
+            $userId = $request->user_id;
+            $TableInfo[] = [
+                "fileName" => $file->getClientOriginalName(),
+                "user_id" => $userId,
+                "fileType" => $file->getClientOriginalExtension(),
+                "downloadLink" => $downloadLink,
+                "parentFolder" => $request->parentFolder
+            ];
+
+        }
+
+
+        for ($i=0; $i<sizeof($TableInfo); $i++){
+            File::create($TableInfo[$i]);
+        }
+
+        return 1;
+    }
+
+    public function deleteFile($id){
+        $file = File::find($id);
+
+        $fileName = $file->fileName.".deleted(".$file->id.")";
+
+        $file->update(['status' => 'deleted', 'fileName' => $fileName]);
+
+
+    }
+    public function deleteFilePermanently($id){
+        $file = File::find($id);
+        $file->destroy($id);
+    }
+
 }
