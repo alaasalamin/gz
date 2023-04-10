@@ -98,7 +98,7 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div id="drag_drop">Drag & Drop File Here</div>
+                                            <div id="drag_drop">Drag & Drop Dateien hier</div>
                                         </div>
                                     </div>
                             </div>

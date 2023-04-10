@@ -66,7 +66,7 @@ function fillFilesTable(data){
                 "                                        </button>\n" +
                 "                                        <ul class=\"dropdown-menu \">\n" +
                 "                                            <li class=\"list-group\">\n" +
-                "                                                <a class=\"p-1\" href=\"#\" onclick=\"deleteFile("+row["objectId"]+")\">Delete</a>\n" +
+                "                                                <a class=\"p-1\" href=\"#\" onclick=\"deleteFile("+row["objectId"]+")\">Löschen</a>\n" +
                 "                                            </li>\n" +
                 "                                        </ul>";
         }
